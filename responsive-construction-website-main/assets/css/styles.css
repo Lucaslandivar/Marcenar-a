@@ -173,6 +173,11 @@ a {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+#portfolio {
+  display: flex;
+  padding-top: 1rem;
+  margin-top: 10px;
+}
 /*=============== ABOUT ===============*/
 .about__img {
   width: 100%;
@@ -210,6 +215,10 @@ a {
 .button:hover {
   background: var(--secondary-color);
   transform: translateY(-2px);
+}
+
+.portfolio .button {
+  margin-top: 1rem;
 }
 
 /*=============== SWIPER ===============*/
