@@ -214,18 +214,11 @@ a {
 
 /*=============== SWIPER ===============*/
 
-/*=============== SWIPER PAGINATION ===============*/
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 10px !important; /* Ajuste este valor conforme necessário */
-}
-
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: var(--white);
-  opacity: 0.5;
-  margin: 0 5px !important;
+  transition: transform 0.3s ease;
+}
+.swiper-pagination-bullet:hover {
+  transform: scale(1.3);
 }
 
 .swiper-pagination-horizontal {
@@ -239,9 +232,21 @@ a {
   transform: scale(1.2);
 }
 .swiper {
-  width: 100%;
-  margin-top: 2rem;
-  padding: 1rem 0;
+  position: relative;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 10px;
+  margin-left: 525px;
+  margin-top: 5px;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  width: auto !important; /* Impede largura total */
+  max-width: 90%;
 }
 
 .swiper-slide {
@@ -269,6 +274,10 @@ a {
   margin-right: auto;
 }
 
+.section__title {
+  margin-bottom: 1rem;
+}
+
 /*=============== FOOTER ===============*/
 .footer {
   background: var(--primary-color);
@@ -283,31 +292,25 @@ a {
 }
 
 /*=============== SCROLL UP ===============*/
-.scrollup {
+#scroll-up {
   position: fixed;
-  right: 1rem;
-  bottom: -50%;
+  right: 1.5rem; /* afastado da borda */
+  bottom: -50%; /* escondido inicialmente */
   background: var(--primary-color);
   color: var(--white);
   padding: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: var(--shadow);
   transition: var(--transition);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  z-index: 999;
 }
-
-.scrollup:hover {
-  background: var(--secondary-color);
-  transform: translateY(-0.25rem);
-}
-
 .show-scroll {
-  bottom: 2rem;
+  bottom: 2rem; /* aparece no canto inferior */
+}
+
+/*=============== CONTACT BUTTON ===============*/
+.contact .button {
+  margin-top: 1rem; /* espaço entre o texto e o botão */
 }
 
 /*=============== MEDIA QUERIES ===============*/
